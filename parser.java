@@ -10,7 +10,7 @@ public class parser {
         int length,count=0,j=0;
         String[] keyword={"sinx","cosx","tanx","sin","logx","log","cos","tan"};
         String[] key={"a","b","c","a_","l","l_","b_","c_"};
-        System.out.println("enter the funcion");
+        System.out.println("enter the function");
          fun=sc.nextLine();
        String[] array=fun.split("[+-/*()^]");
         //String[] array=fun.split("[^a-z]");

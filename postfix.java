@@ -6,10 +6,10 @@ public class postfix {
     public static int top=-1;
     public static char s2[]=new char[100];
     public static char s3[]=new char[100];
-    static int count=0;
+    static int count;
     public char[] post(char s1[]){
         int i;
-        
+        count=0;
         //char s1[]=s.toCharArray();
 
         for(i=0;i<s1.length;i++)
@@ -48,6 +48,10 @@ public class postfix {
             count++;
         }
         s3[count]='?';
+        /*
+        for(int k=0;s3[k]!='?';k++)
+            System.out.println();
+            */
         return s3;
 
 //A * (B + C * D) + E
