@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+Created by rohitwtbs
+<canvas id="myCanvas" width="900" height="700" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var scale=50;
+ctx.font = "30px Arial";
+ctx.fillText("tan x",10,50);
+for(var x=0;x<900;x++)
+{
+ctx.fillRect(x,350,1,1);
+ctx.strokeStyle="#FF0000";
+ctx.stroke();
+}
+for(var y=0;y<700;y++)
+{
+ctx.fillRect(450,y,1,1);
+ctx.strokeStyle="#FF0000";
+ctx.stroke();
+}
+for(var val=0;val<900;val++)
+{
+	y=Math.round(scale*Math.tan(val/scale));
+console.log(y);
+ctx.fillStyle="#20B2AA";
+ctx.fillRect(val,350-y,1,1);
+ctx.stroke();
+}
+ctx.stroke();
+</script> 
+
+</body>
+</html>
