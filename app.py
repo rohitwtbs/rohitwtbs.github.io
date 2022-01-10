@@ -12,6 +12,7 @@ app = dash.Dash(__name__)
 url = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
 attribution = '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
 
+server = app.server
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
 df = pd.DataFrame({
