@@ -6,8 +6,11 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import pandas as pd
+import dash_leaflet as dl
 
 app = dash.Dash(__name__)
+url = 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
+attribution = '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
@@ -38,6 +41,11 @@ app.layout = html.Div(children=[
                 marks={i:'Label {}'.format(i)if i==1 else str(i) for i in range(1,6)},
                 value=3
 
+                ),
+            html.Div([
+                dl.Map(dl.TileLayer(url=url,maxZoom=20,attribution=attribution))
+                ],
+                style={'width':'100%','height':'50vh','margin':"auto","display":"block","position":"relative"}
                 )
 
 #                dcc.Graph(
