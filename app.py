@@ -66,7 +66,9 @@ app.layout = html.Div(children=[
 #                            id='example-graph',
 #                                    figure=fig
 #                                        )
-               ])
+               ],
+               style={'background':'wheat','width':'30%'}
+               )
 
 if __name__ == '__main__':
         app.run_server(debug=True)
