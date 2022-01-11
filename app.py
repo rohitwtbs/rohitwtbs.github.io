@@ -31,11 +31,24 @@ app.layout = html.Div(children=[
                     And now getting my hands dirty in extracting oil i.e
                     information from Data
                         '''),
-            html.H1(children='Languages'),
+            html.H1(children='Skills'),
             html.H3(children='Python'),
+            dcc.Slider(
+                min=0,
+                max=9,
+                marks={i:'Label {}'.format(i)if i==1 else str(i) for i in range(1,6)},
+                value=3
+
+                ),
             html.H3(children='Node.js'),
+            dcc.Slider(
+                min=0,
+                max=9,
+                marks={i:'Label {}'.format(i)if i==1 else str(i) for i in range(1,6)},
+                value=3
+
+                ),
             html.H3(children='Java'),
-            html.Label('Python'),
             dcc.Slider(
                 min=0,
                 max=9,
