@@ -2,7 +2,7 @@ ansi2html==1.6.0
 appnope==0.1.2
 backcall==0.2.0
 Brotli==1.0.9
-certifi==2021.10.8
+certifi==2022.12.7
 charset-normalizer==2.0.10
 click==8.0.3
 dash==2.0.0
